@@ -1,0 +1,20 @@
+<h2>独り言一覧</h2>
+
+<%= notice %>
+
+<table class = "blog_index">
+
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.content %></td>
+      <td class = "blog_show"><%= link_to '詳細確認', blog_path(blog.id) %></td>
+      <td class = "blog_show"><%= link_to '編集する', edit_blog_path(blog.id),data: { confirm: '本当に編集してよろしいですか？' } %> </td>
+      <td class = "blog_show"><%= link_to '削除する', blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+</br>
+
+<%= link_to '新しく独り言をつぶやく', new_blog_path %>

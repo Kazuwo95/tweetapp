@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Monologue</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+      <ul>
+        <li><%= link_to 'トップページ', root_path %></li>
+        <li><%= link_to '独り言をつぶやく', new_blog_path %></li>
+        <li><%= link_to 'つぶやき一覧', blogs_path %></li>
+      </ul>
+    </header>
+
+  <%= yield %>
+
+    <footer>
+      <p>2017.12月期</p>
+      <p>Diver: 内城和樹</p>
+    </footer>
+  
+</body>
+
+</html>
