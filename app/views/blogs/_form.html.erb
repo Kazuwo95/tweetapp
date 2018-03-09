@@ -1,3 +1,5 @@
+<div class = "container">
+
 <%= form_with(model: @blog, local: true, url: choose_new_or_edit) do |form| %>
     <% if @blog.errors.any? %>
         <div id="error_explanation">
@@ -10,13 +12,17 @@
         </div>
     <% end %>
 
-    <div class="blog_content">
-        <%= form.text_area :content,:size=>"50x10" %>
+    <div class = "row">
+      <div class = "col-xs-12 col-sm-12">
+          <%= form.text_area :content,:size=>"50x10" %>
+      </div>
     </div>
-    </br>
+</br>
     <%= form.submit "つぶやく", class: "btn btn-info"%>
 <% end %>
 
 </br>
 
 <td><%= link_to '一覧に戻る', blogs_path%></td>
+
+</div>
