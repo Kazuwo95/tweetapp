@@ -24,11 +24,6 @@ ul{
     vertical-align:middle;
 }
 
-.container{
-    margin-top:20px;
-    padding-bottom: 100px;
-}
-
 .contents {
   margin-top: 20px;
   margin-bottom: 100px;
@@ -36,4 +31,9 @@ ul{
 
 .contents h4 {
   margin-bottom: 30px;
+}
+
+img {
+  object-fit: contain;
+  width:600px;
 }
