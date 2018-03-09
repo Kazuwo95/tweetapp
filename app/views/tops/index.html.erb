@@ -5,12 +5,19 @@
       <li>Monologueは貴方が独り言をつぶやくサイトです。</li>
     </ul>
   </nav>
-  <section class="main-header">
-      <img src="<%= asset_path "top_page_image.jpg" %>">
-  </section>
+<div class="container">
+  <div class = "row">
+    <section class="main-header">
+      <div class = "col-sm-12">
+        <img src="<%= asset_path "top_page_image.jpg" %>">
+      </div>
+    </section>
+  </div>
   <article>
     <div class="contents">
       <h4>さぁ、独り言をつぶやきましょう！</h4>
       <a class="btn btn-info btn-lg" role= "button" href = "blogs/new">つぶやく</a>
     </div>
   </article>
+
+</div>
