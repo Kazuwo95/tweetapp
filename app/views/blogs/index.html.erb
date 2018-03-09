@@ -5,11 +5,11 @@
 <table class = "blog_index">
 
   <% @blogs.each do |blog| %>
+    <td><%= blog.content %></td>
     <tr>
-      <td><%= blog.content %></td>
-      <td class = "blog_show"><%= link_to '詳細確認', blog_path(blog.id) %></td>
-      <td class = "blog_show"><%= link_to '編集する', edit_blog_path(blog.id),data: { confirm: '本当に編集してよろしいですか？' } %> </td>
-      <td class = "blog_show"><%= link_to '削除する', blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
+      <td class = "label label-info btn-lg"><%= link_to '詳細確認', blog_path(blog.id) %></td>
+      <td class = "label label-success btn-lg"><%= link_to '編集する', edit_blog_path(blog.id),data: { confirm: '本当に編集してよろしいですか？' } %></td>
+      <td class = "label label-warning btn-lg"><%= link_to '削除する', blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
     </tr>
   <% end %>
 
