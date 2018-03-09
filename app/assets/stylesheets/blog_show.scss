@@ -1,10 +1,20 @@
-
-table {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
+.index_title {
+  margin-bottom: 30px;
 }
 
-td {
-  display: table-cell;
+.new_tweet {
+  margin-bottom: 50px;
+}
+
+.blog-links {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.row {
+  overflow: scroll;
+}
+
+.container-fluid {
+  padding-bottom: 50px;
 }

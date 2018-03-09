@@ -1,18 +1,25 @@
-<h2>独り言一覧</h2>
+<div class = "container-fluid">
+  <h2 class = "index_title">独り言一覧</h2>
+
+  <div class="new_tweet">
+    <%= link_to '新しく独り言をつぶやく', new_blog_path, class: "btn btn-info" %>
+  </div>
 
 <%= notice %>
 
-<table class = "blog_index">
+<div class = "row">
   <% @blogs.each do |blog| %>
-    <td><%= blog.content %></td>
-    <tr>
-      <td class = "label label-info btn-lg"><%= link_to '詳細確認', blog_path(blog.id) %></td>
-      <td class = "label label-success btn-lg"><%= link_to '編集する', edit_blog_path(blog.id),data: { confirm: '本当に編集してよろしいですか？' } %></td>
-      <td class = "label label-warning btn-lg"><%= link_to '削除する', blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
-    </tr>
+    <div class = "col-xs-12 col-ms-6 blog-panel">
+      <p><%= blog.content %></p>
+      <div class="blog-links">
+        <%= link_to '詳細確認', blog_path(blog.id), class: "btn btn-info" %>
+        <%= link_to '編集する', edit_blog_path(blog.id), data: { confirm: '本当に編集してよろしいですか？'}, class: "btn btn-success" %>
+        <%= link_to '削除する', blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？'}, class: "btn btn-warning" %>
+      </div>
+    </div>
   <% end %>
-</table>
+</div>
 
 </br>
 
-<%= link_to '新しく独り言をつぶやく', new_blog_path, class: "btn btn-info" %>
+</div>
