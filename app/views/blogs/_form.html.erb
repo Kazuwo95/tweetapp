@@ -12,13 +12,15 @@
         </div>
     <% end %>
 
+
     <div class = "row">
-      <div class = "col-xs-12 col-sm-12">
-          <%= form.text_area :content,:size=>"50x10" %>
+      <div class = "col-sm-12">
+          <%= form.text_area :content,:size=>"48x10" %>
       </div>
     </div>
-</br>
-    <%= form.submit "つぶやく", class: "btn btn-info"%>
+    <div class = "tweet_button">
+      <%= form.submit "つぶやく", class: "btn btn-info"%>
+    </div>
 <% end %>
 
 </br>

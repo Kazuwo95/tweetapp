@@ -5,29 +5,8 @@ header {
   background-color: #012F4B;
   height: 54px;
   padding-top: 0;
-}
-
-header ul {
-  margin: 0 auto;
-  list-style: none;
-}
-
-header ul a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: white;
-}
-
-header li {
-  float: left;
-  width: auto;
-}
-
-header ul:after {
-  content: "";
-  display: block;
-  clear: both;
+  text-align: center;
+  padding-top: 20px;
 }
 
 footer {
@@ -35,7 +14,6 @@ footer {
   background-color:#012F4B;
   padding: 20px 0 10px 0;
   color: white;
-  padding-bottom: 10px;
   font-size: 12px;
   bottom: 0;
   position: absolute;
