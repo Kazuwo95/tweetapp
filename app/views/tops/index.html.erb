@@ -16,7 +16,14 @@
   <article>
     <div class="contents">
       <h4>さぁ、独り言をつぶやきましょう！</h4>
-      <a class="btn btn-info btn-lg" role= "button" href = "blogs/new">つぶやく</a>
+      <% if logged_in? %>
+        <a class="btn btn-info btn-md" role= "button" href = "blogs/new">つぶやく</a>
+      <% else %>
+        <a class="btn btn-info btn-md" role= "button" href = "users/new">アカウント登録</a>
+        </br>
+        </br>
+        <a class="btn btn-info btn-md" role= "button" href = "sessions/new">ログイン</a>
+      <% end %>
     </div>
   </article>
 

@@ -1,0 +1,38 @@
+<div class = "signup_page">
+<div class = "page_title">新規登録</div>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <p class="alert alert-danger" role="alert"><%= @user.errors.count %>件のエラーがあります</p>
+    <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @user, local: true) do |f| %>
+  <%= f.label "お名前" %>
+  </br>
+  <%= f.text_field :name %>
+  </br>
+
+  <%= f.label "メールアドレス" %>
+  </br>
+  <%= f.email_field :email %>
+  </br>
+
+  <%= f.label "パスワード" %>
+  </br>
+  <%= f.password_field :password %>
+  </br>
+
+  <%= f.label "確認用パスワード" %>
+  </br>
+  <%= f.password_field :password_confirmation %>
+  </br>
+
+  <%= f.submit "アカウントを作成する", class: "btn btn-info" %>
+<% end %>
+</div>

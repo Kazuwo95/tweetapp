@@ -1,0 +1,19 @@
+<div class = "login_page">
+  <div class = "page_title">ログイン</div>
+
+  <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+
+    <%= f.label "メールアドレス" %>
+    </br>
+    <%= f.email_field :email %>
+    </br>
+
+    <%= f.label "パスワード" %>
+    </br>
+    <%= f.password_field :password %>
+    </br>
+
+    <%= f.submit "ログイン", class: "btn btn-info"%>
+  <% end %>
+  </div>
+</div>

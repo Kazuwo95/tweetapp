@@ -10,31 +10,42 @@
 
   <body>
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
-        <span class="sr-only">Monologue</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Monologue</a>
-    </div>
-    <div id="gnavi" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/blogs/new">独り言をつぶやく</a></li>
-        <li><a href="/blogs">独り言一覧</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+            <span class="sr-only">Monologue</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Monologue</a>
+        </div>
+        <div id="gnavi" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          <% if logged_in? %>
+            <li><%= link_to "独り言をつぶやく", new_blog_path %></li>
+            <li><%= link_to "独り言一覧", blogs_path %></li>
+            <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+          <% else %>
+            <li><%= link_to "アカウント登録", new_user_path %></li>
+            <li><%= link_to "ログイン", new_session_path %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
 
-  <%= yield %>
+    <%= yield %>
 
     <footer>
       <p>2017.12月期</p>
       <p>Diver: 内城和樹</p>
     </footer>
-</body>
+  </body>
 </html>

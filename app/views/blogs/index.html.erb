@@ -1,11 +1,9 @@
 <div class = "container">
-  <h2 class = "index_title">独り言一覧</h2>
+  <div class = "page_title">独り言一覧</div>
 
   <div class = "new_tweet">
     <%= link_to '新しく独り言をつぶやく', new_blog_path, class: "btn btn-info" %>
   </div>
-
-<%= notice %>
 
 <div class = "row">
   <% @blogs.each do |blog| %>

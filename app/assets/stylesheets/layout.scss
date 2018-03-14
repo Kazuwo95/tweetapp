@@ -17,6 +17,7 @@ footer {
   font-size: 12px;
   bottom: 0;
   position: absolute;
+  margin-top: 50px;
 }
 
 html {
@@ -28,4 +29,28 @@ html {
 body {
   text-align: center;
   width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+  min-height: 100%;
+}
+
+.page_title {
+  width: 30%;
+  background-color: #012F4B;
+  height: 50px;
+  color: white;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+input {
+  margin: 10px 0 25px 0;
 }
