@@ -1,3 +1,12 @@
 <div class = "page_title"><%= @user.name %>のページ</div>
 
 <p>メールアドレス: <%= @user.email %></p>
+
+</br>
+</br>
+
+<h4>お気に入りしたつぶやき</h4>
+
+<% @favorite_blogs.each do |blog| %>
+  <p><%= blog.content %></p>
+<% end %>

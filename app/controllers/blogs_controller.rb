@@ -16,6 +16,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
       if @blog.save
         flash[:success] = "ブログを作成しました！"
         redirect_to blogs_path
@@ -25,6 +26,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
   def edit
