@@ -8,7 +8,7 @@
 <div class = "row">
   <% @blogs.each do |blog| %>
     <div class = "col-xs-12 col-ms-6 blog-panel">
-      <p><%= blog.user.name %>さんの独り言</p>
+      <p><%= @blog.user.name %>さんの独り言</p>
       </br>
       <p><%= blog.content %></p>
       <div class= "blog-links">
