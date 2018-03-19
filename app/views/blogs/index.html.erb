@@ -12,13 +12,9 @@
       </br>
       <p><%= blog.content %></p>
       <div class= "blog-links">
-        <% if current_user.id == blog.user_id %>
           <%= link_to '詳細確認', blog_path(blog.id), class: "btn btn-info" %>
           <%= link_to '編集する', edit_blog_path(blog.id), data: { confirm: '本当に編集してよろしいですか？'}, class: "btn btn-success" %>
           <%= link_to '削除する', blog_path(blog.id), method: :delete, data: { confirm: '本当に削除してよろしいですか？'}, class: "btn btn-warning" %>
-        <% else %>
-          <%= link_to '詳細確認', blog_path(blog.id), class: "btn btn-info" %>
-        <% end %>
       </div>
     </div>
   <% end %>
