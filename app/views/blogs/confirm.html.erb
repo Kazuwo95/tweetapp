@@ -1,15 +1,15 @@
-<h3>以下の内容で、送信する。</h3>
+<div class = "page_title"><%= @user.name %>のページ</div>
 
 <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
     <%= form.hidden_field :content %>
 
     <p>本文:<%= @blog.content %></p>
-    <%= form.submit  "投稿する" %>
+    <%= form.submit  "投稿する", class: "btn btn-info" %>
 <% end %>
 
 </br>
 
 <%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
     <%= form.hidden_field :content %>
-    <%= form.submit "もどる", name: 'back' %>
+    <%= form.submit "もどる", name: 'back', class: "btn btn-success" %>
 <% end %>
