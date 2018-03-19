@@ -1,10 +1,10 @@
-<div class = "page_title"><%= @user.name %>のページ</div>
+<div class = "page_title">つぶやきますか？</div>
 
 <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
     <%= form.hidden_field :content %>
 
     <p>本文:<%= @blog.content %></p>
-    <%= form.submit  "投稿する", class: "btn btn-info" %>
+    <%= form.submit  "つぶやく", class: "btn btn-info" %>
 <% end %>
 
 </br>
