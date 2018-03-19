@@ -1,4 +1,8 @@
-<h1 class = "tweet_more">つぶやきを詳しく</h1>
+<div class = "page_title">独り言を詳しく</div>
+
+</br>
+
+<p><%= @blog.user.name %>さんの独り言</p>
 
 </br>
 
@@ -17,5 +21,6 @@
 <% end %>
 
 </br>
+</br>
 
-<td><%= link_to '一覧に戻る', blogs_path %></td>
+<td><%= link_to '一覧に戻る', blogs_path , class: 'btn btn-info' %></td>
