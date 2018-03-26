@@ -27,9 +27,11 @@
             <li><%= link_to "独り言一覧", blogs_path %></li>
             <li><%= link_to "マイページ", user_path(current_user.id) %></li>
             <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
+            <li><%= link_to "お問い合わせ", new_contact_path %></li>
           <% else %>
             <li><%= link_to "アカウント登録", new_user_path %></li>
             <li><%= link_to "ログイン", new_session_path %></li>
+            <li><%= link_to "お問い合わせ", new_contact_path %></li>
           <% end %>
           </ul>
         </div>

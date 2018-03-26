@@ -1,0 +1,24 @@
+
+<p class = "page_title">お問い合わせ</p>
+
+  <p>お名前</p>
+  </br>
+  <%= contact.name %>
+
+  <p>メールアドレス</p>
+  </br>
+  <%= contact.email %>
+
+  <p>お問い合わせ内容</p>
+  </br>
+  <%= contact.content %>
+
+    <% @contacts.each do |contact| %>
+      <%= link_to 'Show', contact %>
+      <%= link_to 'Edit', edit_contact_path(contact) %>
+      <%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+
+  </br>
+
+  <%= link_to 'New Contact', new_contact_path %>

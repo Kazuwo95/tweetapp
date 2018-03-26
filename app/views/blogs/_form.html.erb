@@ -1,26 +1,26 @@
 <div class = "container">
 
 <%= form_with(model: @blog, local: true, url: choose_new_or_edit) do |form| %>
-    <% if @blog.errors.any? %>
-        <div id="error_explanation">
-            <p class="alert alert-danger" role="alert"><%= @blog.errors.count %>件のエラーがあります。</p>
-            <ul>
-            <% @blog.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-            </ul>
-        </div>
-    <% end %>
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <p class="alert alert-danger" role="alert"><%= @blog.errors.count %>件のエラーがあります。</p>
+      <ul>
+        <% @blog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 
-    <div class = "row">
-      <div class = "col-sm-12">
-          <%= form.text_area :content,:size=>"48x10" %>
-      </div>
+  <div class = "row">
+    <div class = "col-sm-12">
+      <%= form.text_area :content,:size=>"40x10" %>
     </div>
-    <div class = "tweet_button">
-      <%= form.submit "つぶやく", class: "btn btn-info"%>
-    </div>
+  </div>
+  <div class = "tweet_button">
+    <%= form.submit "つぶやく", class: "btn btn-info"%>
+  </div>
 <% end %>
 
 </br>
