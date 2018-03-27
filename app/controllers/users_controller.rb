@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      UserMailer.welcome_email(@user).deliver_later
+      flash[:succrss] = 'アカウントを作成しました！'
       redirect_to user_path(@user.id)
     else
       render 'new'
@@ -15,6 +17,13 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @favorite_blogs = @user.favorite_blogs
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "アカウントを削除しました！"
+    redirect_to root_path
   end
 
   private

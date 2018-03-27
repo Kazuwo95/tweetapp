@@ -10,3 +10,7 @@
 <% @favorite_blogs.each do |blog| %>
   <p><%= blog.content %></p>
 <% end %>
+
+</br>
+</br>
+<p><%= link_to 'アカウントを削除する', user_path, method: :delete, data: { confirm: '本当に削除してよろしいですか？'}, class: "btn btn-danger" %></p>
