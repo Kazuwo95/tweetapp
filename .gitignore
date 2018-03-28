@@ -18,4 +18,4 @@
 
 .byebug_history
 .env
-.config/environments/development.rb
+.config/environments/production.rb
