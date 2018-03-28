@@ -1,6 +1,4 @@
 class UserMailer < ApplicationMailer
-  default form: 'notifications@example.com'
-
   def welcome_email(uesr)
     @user = UserMailer
     @url = 'https://agile-cove-84334.herokuapp.com/'
