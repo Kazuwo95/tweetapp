@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-
   root to: 'tops#index'
   resources :blogs do
     collection do

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortFolio</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  </head>
+  <body class = "p_body">
+    <h1 class = "p_title">Want be Creator</h1>
+    <script>
+      $(function() {
+          var $allMsg = $('.p_title');
+          var $wordList = $('.p_title').html().split("");
+          $('.p_title').html("");
+          $.each($wordList, function(idx, elem) {
+              var newEL = $("<span/>").text(elem).css({ opacity: 0 });
+              newEL.appendTo($allMsg);
+              newEL.delay(idx * 70);
+              newEL.animate({ opacity: 0.7 }, 1100);
+          });
+      });
+    </script>
+  </body>
+</html>
