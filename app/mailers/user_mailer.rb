@@ -3,8 +3,8 @@ class UserMailer < ApplicationMailer
 
   def welcome_email(user)
     @user = user
-    @url = 'https://agile-cove-84334.herokuapp.com/'
+    @url = 'https://agile-cove-84334.herokuapp.com/sessions/new'
     mail(to: @user.email, subject: 'Monologueにご登録いただきありがとうございます！')
   end
-  
+
 end

@@ -6,15 +6,10 @@
   </head>
   <body>
     <h1><%= @user.name %>様、Monologueへようこそ。</h1>
-    <p>
-      https://agile-cove-84334.herokuapp.com/のサインアップが成功しました。
-      あなたのお名前: <%= @user.name %>
-      あなたのパスワード: <%= @user.email %>
-      <br>
-    </p>
-    <p>
-      このサイトにログインするには、<%= @url %>をクリックしてください。
-    </p>
+    <p><a href = 'https://agile-cove-84334.herokuapp.com/'>Monologue</a>のサインアップが成功しました。</p>
+    <p>あなたのお名前: <%= @user.name %></p>
+    <p>あなたのパスワード: <%= @user.email %></p>
+    <p>このサイトにログインするには、<%= @url %>をクリックしてください。</p>
     <p>どうぞお楽しみくださいませ。</p>
   </body>
 </html>
