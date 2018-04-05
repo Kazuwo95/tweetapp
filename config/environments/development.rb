@@ -56,4 +56,16 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :letter_opener
 
+  config.action_mailer.default_url_options = { host: 'https://agile-cove-84334.herokuapp.com/' }
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :domain => 'smtp.gmail.com',
+    :user_name => Settings.gmail[:user_name],
+    :password => Settings.gmail[:password],
+    :authentication => 'plain'
+  }
+
 end
