@@ -29,7 +29,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         ContactMailer.contact_mail(@contact).deliver
-        flash[:success] = 'お問い合わせ内容を作成しました！'
+        flash[:success] = 'お問い合わせを送信しました！'
         format.html { redirect_to @contact}
         format.json { render :show, status: :created, location: @contact }
       else
