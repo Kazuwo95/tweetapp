@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      UserMailer.welcome_email(@blog,@user).deliver
+      UserMailer.welcome_email(@user).deliver
       flash[:success] = "アカウントを作成しました！ログインしましょう！"
       redirect_to user_path(@user.id)
     else
